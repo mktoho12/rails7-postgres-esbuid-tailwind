@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - ruby-bundle-cache:/bundle
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+      - redis
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: myapp_development
+  redis:
+    image: redis:7.0
+    ports:
+      - 6379:6379
+volumes:
+  db:
+  ruby-bundle-cache:
