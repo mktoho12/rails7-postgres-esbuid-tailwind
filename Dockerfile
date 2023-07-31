@@ -20,9 +20,6 @@ VOLUME /bundle
 RUN bundle config set --global path '/bundle'
 ENV PATH="/bundle/ruby/$RUBY_VERSION/bin:${PATH}"
 
-# Install Rails
-RUN gem install rails
-
 # Ensure binding is always 0.0.0.0, even in development, to access server from outside container
 ENV BINDING="0.0.0.0"
 

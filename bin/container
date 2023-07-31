@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+if ! gem list foreman -i --silent; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+if [ -f tmp/pids/server.pid ]; then
+  rm tmp/pids/server.pid
+fi
+
+bundle
+bin/rails db:migrate
+yarn
+
+exec foreman start -f Procfile.dev "$@"

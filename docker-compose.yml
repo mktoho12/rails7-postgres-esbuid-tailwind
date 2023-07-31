@@ -2,7 +2,7 @@ version: "3.8"
 services:
   app:
     build: .
-    command: bin/dev
+    command: bin/container
     volumes:
       - .:/app
       - ruby-bundle-cache:/bundle

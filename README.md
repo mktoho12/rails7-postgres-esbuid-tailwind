@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+```
+docker volume create myapp-data-volume
+docker volume create ruby-bundle-cache
+docker compose up
+```
