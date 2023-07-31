@@ -65,6 +65,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Use live reloading [https://github.com/railsjazz/rails_live_reload]
+  gem "rails_live_reload", "~> 0.3.4"
 end
 
 group :test do
