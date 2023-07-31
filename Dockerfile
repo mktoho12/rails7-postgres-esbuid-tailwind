@@ -27,4 +27,4 @@ RUN gem install rails
 ENV BINDING="0.0.0.0"
 
 # Overwrite ruby image's entrypoint to provide open cli
-ENTRYPOINT ["rails", "s"]
+ENTRYPOINT [""]
