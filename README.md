@@ -1,27 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an initial state of a Rails 7.0.6 project with the following additions:
+- PostgreSQL Docker image
+- [live reload](https://github.com/railsjazz/rails_live_reload)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
 
 ```
 docker volume create myapp-data-volume
